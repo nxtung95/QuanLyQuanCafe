@@ -1,0 +1,9 @@
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\bin\Debug\BUS.dll
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\bin\Debug\BUS.pdb
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\bin\Debug\DAL.dll
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\bin\Debug\DAL.pdb
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\obj\Debug\BUS.dll
+D:\Freelancer\qlcaphe\Coffee\QuanLyQuanCafe\BUS\obj\Debug\BUS.pdb
