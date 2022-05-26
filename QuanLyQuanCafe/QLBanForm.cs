@@ -54,6 +54,9 @@ namespace QuanLyQuanCafe
             flowLayoutPanel1.Controls.Clear();
 
             List<Table> tableList = tableBusiness.getAllTable();
+            cbBanChuyen.DataSource = tableList;
+            cbBanChuyen.DisplayMember = "Name";
+
             foreach (Table table in tableList)
             {
                 Button btnTable = new Button();
@@ -84,11 +87,22 @@ namespace QuanLyQuanCafe
             }
         }
 
+        private void calculateTotalPrice()
+        {
+            double totalPrice = 0;
+            foreach (ListViewItem item in lvMenu.Items)
+            {
+                totalPrice += Convert.ToDouble(item.SubItems[3].Text);
+            }
+            
+        } 
+
         private void BtnTable_Click(object sender, EventArgs e)
         {
             lvMenu.Items.Clear();
             Table table = (sender as Button).Tag as Table;
             btnThemDoUong.Tag = table;
+            btnXoaBan.Tag = table;
             if (table.Status == 0)
             {
                 return;
@@ -132,6 +146,40 @@ namespace QuanLyQuanCafe
             listViewItem.SubItems.Add(soLuong.ToString());
             listViewItem.SubItems.Add(totalPrice);
             lvMenu.Items.Add(listViewItem);
+        }
+
+        private void btnThemBan_Click(object sender, EventArgs e)
+        {
+            string nextTableName = tableBusiness.getNextTableName();
+            bool result = tableBusiness.add(nextTableName, 0);
+            if (!result)
+            {
+                MessageBox.Show("Có lỗi xảy ra...");
+                return;
+            }
+            loadAllTable();
+        }
+
+        private void btnXoaBan_Click(object sender, EventArgs e)
+        {
+            Table currentTable = (sender as Button).Tag as Table;
+            if (currentTable == null)
+            {
+                MessageBox.Show("Chọn bàn cần xóa!!");
+                return;
+            }
+            if (currentTable.Status == 1)
+            {
+                MessageBox.Show("Bàn đang được sử dụng!");
+                return;
+            }
+            bool result = tableBusiness.delete(currentTable.Id);
+            if (!result)
+            {
+                MessageBox.Show("Có lỗi xảy ra...");
+                return;
+            }
+            loadAllTable();
         }
     }
 }

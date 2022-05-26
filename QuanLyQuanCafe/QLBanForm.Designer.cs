@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnThemBan = new System.Windows.Forms.Button();
-            this.btnSuaBan = new System.Windows.Forms.Button();
+            this.btnXoaBan = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lvMenu = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -166,15 +166,17 @@
             this.btnThemBan.TabIndex = 14;
             this.btnThemBan.Text = "Thêm bàn";
             this.btnThemBan.UseVisualStyleBackColor = true;
+            this.btnThemBan.Click += new System.EventHandler(this.btnThemBan_Click);
             // 
-            // btnSuaBan
+            // btnXoaBan
             // 
-            this.btnSuaBan.Location = new System.Drawing.Point(981, 150);
-            this.btnSuaBan.Name = "btnSuaBan";
-            this.btnSuaBan.Size = new System.Drawing.Size(95, 45);
-            this.btnSuaBan.TabIndex = 15;
-            this.btnSuaBan.Text = "Sửa Bàn";
-            this.btnSuaBan.UseVisualStyleBackColor = true;
+            this.btnXoaBan.Location = new System.Drawing.Point(981, 150);
+            this.btnXoaBan.Name = "btnXoaBan";
+            this.btnXoaBan.Size = new System.Drawing.Size(95, 45);
+            this.btnXoaBan.TabIndex = 15;
+            this.btnXoaBan.Text = "Xóa Bàn";
+            this.btnXoaBan.UseVisualStyleBackColor = true;
+            this.btnXoaBan.Click += new System.EventHandler(this.btnXoaBan_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -225,7 +227,7 @@
             this.ClientSize = new System.Drawing.Size(1101, 476);
             this.Controls.Add(this.lvMenu);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.btnSuaBan);
+            this.Controls.Add(this.btnXoaBan);
             this.Controls.Add(this.btnThemBan);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -263,7 +265,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnThemBan;
-        private System.Windows.Forms.Button btnSuaBan;
+        private System.Windows.Forms.Button btnXoaBan;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ListView lvMenu;
         private System.Windows.Forms.ColumnHeader columnHeader1;

@@ -21,5 +21,23 @@ namespace BUS
         {
             return tableDao.getAllTable();
         }
+
+        public String getNextTableName()
+        {
+            return tableDao.getNextTableName();
+        }
+
+        public bool add(String name, int status)
+        {   
+            Table table = new Table();
+            table.Name = name;
+            table.Status = status;
+            return tableDao.add(table);
+        }
+
+        public bool delete(int tableId)
+        {
+            return tableDao.delete(tableId);
+        }
     }
 }
